@@ -7,8 +7,8 @@ from .models import Pizza, Topping
 class PizzaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pizza
-        fields = ('name', 'base_price', 'created', )
-        read_only_fields = ('base_price', 'created', )
+        fields = ('id', 'name', 'base_price', 'created', )
+        read_only_fields = ('id', 'base_price', 'created', )
 
 class ToppingSerializer(serializers.ModelSerializer):
     class Meta:
