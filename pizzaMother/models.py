@@ -13,7 +13,13 @@ class Pizza(models.Model):
         self.name = name
 
     def total_price(self):
-        pass
+        total_price = self.base_price
+        toppings = self.topping_set.all()
+
+        for topping in toppings:
+            total_price += topping.price
+        return total_price
+
 
 class Topping(models.Model):
     name = models.CharField(max_length=20)
