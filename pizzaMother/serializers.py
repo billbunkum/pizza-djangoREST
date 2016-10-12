@@ -10,6 +10,7 @@ class PizzaSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'base_price', 'created', 'total_price', )
         read_only_fields = ('id', 'base_price', 'created', 'total_price', )
 
+""" this is done in Models.py instead """
     # total_price = serializers.SerializerModelField()
         # creates a def get_
     # def get_total_price(self, obj):
